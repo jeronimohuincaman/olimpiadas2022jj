@@ -1,0 +1,16 @@
+.home-container{
+    max-width: 2000px;
+    width:100vw;
+    height: 100vh;
+    background-color: #fbf1ea;
+}
+
+.header-container{
+    background-color: #e5cdb0 ;
+    height: 120px;
+}
+
+.footer-container{
+    background-color:#c0bbbb;
+    height: 100%;
+}
