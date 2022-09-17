@@ -4,6 +4,11 @@ const app = express()
 //importar conexion mongoDB
 const archivoBD = require('./conexion')
 
+//importacion del archivo de rutas y modelo obras
+const rutaObra = require('./rutas/obra')
+
+app.use('/api/obra', rutaObra)
+
 app.get('/',(req,res) => {
     res.end('bienvenidos al servidor backend Node.js. Corriendo...')
 })
