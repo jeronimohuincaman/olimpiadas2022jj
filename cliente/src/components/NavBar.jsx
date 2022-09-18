@@ -15,6 +15,12 @@ export default function NavBar() {
                 <li class="nav-item">
                 <a class="nav-link" href="agenda">Agenda</a>
                 </li>
+                <li class="nav-item">
+                <a class="nav-link" href="agregarEvento">Formulario evento "no va"</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="agregarObra"> formulario Obra "no va"</a> 
+                </li>
             </ul>
             </div>
         </div>
