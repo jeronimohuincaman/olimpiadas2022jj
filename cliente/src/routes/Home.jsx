@@ -3,7 +3,8 @@ import MapaDisplay from '../components/MapaDisplay'
 import NavBar from '../components/NavBar'
 import './styles/Home.css'
 
-export default function Home() {
+export default  function Home() {
+
   return (
     <div className='home-container'>
         <div className='header-container'>
