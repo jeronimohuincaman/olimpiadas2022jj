@@ -23,7 +23,10 @@ export default function MapaDisplay() {
             <Contenido>
                 <img src={thesceam} alt="the scream" />
                 <h2>El grito</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, voluptates! Ducimus quos consequuntur aliquid facilis, placeat quod iusto dolores sit.</p>
+                <p>Uno de los pioneros del expresionismo noruego, el enfoque estilístico de Edvard Munch para transmitir emociones, 
+                   en particular sentimientos de angustia, es claro en su icónica obra maestra, El grito.
+                   Esta pintura fue la inspiración de la famosa máscara del asesino en las películas de Scream. Acerca de la pintura,
+                   el director dijo: “Es una referencia clásica al horror puro de algunas partes del siglo XX, o tal vez solo de la existencia humana”.</p>
             </Contenido>
         </Modal> 
     </div>
