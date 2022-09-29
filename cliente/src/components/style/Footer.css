@@ -1,9 +1,9 @@
-.container{
+.footer-container{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas: "autor1 nombre escuela"
                          "autor2 nombre escuela";
-    display: grid;
+    padding: 20px;
 }
 
 h5{
@@ -12,7 +12,6 @@ h5{
 
 .autor1{
     grid-area: autor1;
-    margin-top: 0;
 }
 .autor2{
     grid-area: autor2;

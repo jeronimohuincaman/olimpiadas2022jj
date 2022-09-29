@@ -4,8 +4,7 @@ import './style/Footer.css'
 export const Footer = () => {
   return (
     
-    <div className='container'>
-      
+    <div className='footer-container'> 
         <h5>
           @JJmuseums
         </h5>
