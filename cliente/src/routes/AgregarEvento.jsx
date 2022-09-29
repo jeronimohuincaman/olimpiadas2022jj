@@ -1,7 +1,9 @@
 import axios from 'axios';
 import uniqid from 'uniqid'
 import React, { useState } from 'react'
-
+import './styles/AgregarEvento.css'
+import NavBar from '../components/NavBar';
+import { Footer } from '../components/Footer';
 export default function AgregarEvento() {
 
     //Hooks
@@ -29,28 +31,34 @@ export default function AgregarEvento() {
   
     return (
     <div className='container'>
-        <div className='row'>
-            <h2 className="mt-4">Crear nuevo evento</h2>
-        </div>
-
-        <div className="row">
-            <div className="col-sm-6 offset-3">
-                <div className="mb-3">
-                    <label htmlFor="nombre" className="form-label" >Nombre del evento</label> {/*A cada input le añadimos el hook para que se guarde y su set para que se refresque en caso de alguna modificacion */}
-                    <input type="text" className="form-control" value={nombre} onChange={(e) => {setNombre(e.target.value)}}/>
+            <div className="header">
+                <NavBar/>
+            </div>
+        <div className="contenido">
+            <div className='row'>
+                <h2 className="mt-4">Crear nuevo evento</h2>
+            </div>
+            <div className="row">
+                <div className="col-sm-6 offset-3">
+                    <div className="mb-3">
+                        <label htmlFor="nombre" className="form-label" >Nombre del evento</label> {/*A cada input le añadimos el hook para que se guarde y su set para que se refresque en caso de alguna modificacion */}
+                        <input type="text" className="form-control" value={nombre} onChange={(e) => {setNombre(e.target.value)}}/>
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="fecha" className="form-label" >Fecha</label>
+                        <input type="date" className="form-control" value={fecha} onChange={(e) => {setFecha(e.target.value)}}/>
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="hora-inicio" className="form-label" >Hora de inicio</label>
+                        <input type="time" className="form-control" value={horaIni} onChange={(e) => {setHoraIni(e.target.value)}}/>
+                    </div>
+                    <buttom onClick={agregarEvento} className="btn btn-success" >Guardar evento</buttom>                  
                 </div>
-                <div className="mb-3">
-                    <label htmlFor="fecha" className="form-label" >Fecha</label>
-                    <input type="date" className="form-control" value={fecha} onChange={(e) => {setFecha(e.target.value)}}/>
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="hora-inicio" className="form-label" >Hora de inicio</label>
-                    <input type="time" className="form-control" value={horaIni} onChange={(e) => {setHoraIni(e.target.value)}}/>
-                </div>
-
-                <buttom onClick={agregarEvento} className="btn btn-success" >Guardar evento</buttom>                  
             </div>
         </div>
+            <div className="footer">
+                <Footer/>
+            </div>
     </div>
   )
 }
