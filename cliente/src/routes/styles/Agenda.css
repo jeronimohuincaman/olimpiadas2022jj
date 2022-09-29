@@ -15,8 +15,6 @@
 .container .header,
 .container .contenido,
 .container .footer {
-    background: #fff;
-    padding: 20px;
     border-radius: 10px;
 }
 
@@ -28,8 +26,25 @@
 
 .container .contenido{
     grid-area: contenido;
-    background: #e5cdb0;
-    color: #fff;
+    background: #eeba76;
+    padding: 10px;
+}
+
+.btn {
+    grid-area: botones;
+    margin-bottom: 20px;
+}
+
+.cuadrado{
+    grid-area: cuadrado;
+    margin: 30px auto;
+    border-radius: 20px;
+    background: beige;
+    width: 400px;
+    height: 400px;
+    display: flex   ;
+    justify-content: center;
+    align-items: center;
 }
 
 .container .footer{
