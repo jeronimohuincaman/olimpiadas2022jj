@@ -27,6 +27,7 @@ router.post('/agregarobra', (req, res) =>{
         descripcion: req.body.descripcion,
         imagen: req.body.imagen,
         video:req.body.video,
+        idobra:req.body.idobra,
     })
 
     //o tambien (!err ? res.send('obra agregada correctamente'):res.send(err)) //operacion ternaria
@@ -39,12 +40,50 @@ router.post('/agregarobra', (req, res) =>{
     })
 })
 
-
 //obtener todos las obras
 router.get('/obtenerobras', (req, res) => {
     ModeloObra.find({}, function(docs,err){
         if (!err){
             res.send(docs) 
+        }else{
+            res.send(err)
+        }
+    })
+})
+
+//obtener data de obra
+router.post('/obtenerdataobra', (req, res) => {
+    ModeloObra.find({idobra:req.body.idobra}, function(docs,err){
+        if (!err){
+            res.send(docs) 
+        }else{
+            res.send(err)
+        }
+    })
+})
+
+//actualizar obra
+router.post('/actualizarobra', (req, res) => {
+    ModeloObra.findOneAndUpdate({idobra:req.body.idobra}, {
+        nombre: req.body.nombre,
+        descripcion: req.body.descripcion,
+        imagen: req.body.imagen,
+        video: req.body.video,
+        idobra: req.body.idobra
+    }, (err) => {
+        if(!err){
+            res.send('Obra actualizado correctamente')
+        }else{
+            res.send(err)
+        }
+    })
+})
+
+//eliminar obra
+router.post('/borrarobra', (req, res) => {
+    ModeloObra.findOneAndDelete({idobra:req.body.idobra}, (err) => {
+        if(!err){
+            res.send('Obra borrada correctamente')
         }else{
             res.send(err)
         }
