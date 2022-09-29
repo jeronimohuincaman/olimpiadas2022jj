@@ -32,6 +32,10 @@
     color: #fff;
 }
 
+.btn{
+    margin: 10px;
+}
+
 .home-container .footer{
     grid-area: footer;
     min-height: 150px;
