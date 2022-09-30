@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactPlayer from 'react-player'
 import { Footer } from '../components/Footer'
 // import ListaObras from '../components/ListaObras'
 import MapaDisplay from '../components/MapaDisplay'
@@ -19,6 +20,8 @@ export default  function Home() {
             </div>
 
             {/* <ListaObras/> */}
+
+            <ReactPlayer className="video" url='https://youtu.be/PxsLtr1hkhQ' />
 
             <div className="reacciones">
               <button className="btn btn-success"> Conforme :)</button>
